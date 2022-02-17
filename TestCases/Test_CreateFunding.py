@@ -13,7 +13,7 @@ class Test_CreateFund(BasePage):
         logging.info("Create a Funding")
         loginlogout = Login_Logout(self.driver)
         loginlogout.login()
-        '''Create Funding'''
+        # '''Create Funding'''
         funding = CreateFunding(self.driver)
         funding.test_funding()
 
