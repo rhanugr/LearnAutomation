@@ -1,10 +1,10 @@
 from selenium.webdriver.common.by import By
 
-from Lib.BasePage import Baseclass
-from TestCases.LogoutTest import Test_Logout
+from Lib.BasePage import BasePage
 
 
-class Test_Login(Baseclass):
+
+class TestLogin(BasePage):
 
     def test_login(self):
         print("Hello")

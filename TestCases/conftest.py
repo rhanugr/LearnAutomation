@@ -1,5 +1,7 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+
 
 @pytest.fixture(scope="class")
 def set_up(request):
@@ -13,3 +15,5 @@ def set_up(request):
     yield
     driver.close()
     driver.quit()
+    # menu = driver.find_element(By.XPATH, "//*[@role='presentation' and contains(text(),'Mobility')]")
+    # menu.click()
