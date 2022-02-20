@@ -11,3 +11,4 @@ class TestMobility(BasePage):
         str = "  Jtest"
         print(str.strip())
         login_logout.logout()
+        print("PASS")
