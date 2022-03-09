@@ -8,7 +8,7 @@ class CreateFunding():
     def __init__(self,driver):
         self.driver = driver
 
-    def test_funding(self):
+    def funding(self):
         self.driver.find_element(By.ID,"sideBarFunding_button").click()
         self.driver.find_element(By.ID,"sideBarOption-fundings").click()
         self.driver.find_element(By.XPATH,"//ul[@id='actionsToolbar']//li[@class='actionsToolbarItem newIcon']").click()

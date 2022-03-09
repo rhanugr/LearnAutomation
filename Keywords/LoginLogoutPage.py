@@ -4,15 +4,19 @@ from Lib.BasePage import BasePage
 
 
 
-class TestLogin(BasePage):
+class Login():
+    def __init__(self,driver):
+        self.driver = driver
 
-    def test_login(self):
-        print("Hello")
+    def login(self):
+        # print("Hello")
         self.driver.find_element(By.NAME, "username").send_keys("support@moveon4.com")
         self.driver.find_element(By.NAME, "password").send_keys("Moveon@30000")
         self.driver.find_element(By.NAME, "label_button_login").click()
         user_login= self.driver.find_element(By.ID,"loginDetails").text
-        assert user_login == "surname_1, firstname_1"
-        logout = Test_Logout(self.driver)
-        logout.test_logout()
+        # assert user_login == "surname_1, firstname_1"
+        # logout = TestLogin(self.driver)
+        # logout.test_logout()
+    def logout(self):
+        self.driver.find_element(By.XPATH,"//span[@id='logout']//a[@class='moveon_logout_link']").click()
 
